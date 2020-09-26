@@ -1,0 +1,20 @@
+/*
+@mixin box_center($w) {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: $w;
+  transform: translate(-50%, -50%);
+}
+
+*/
+div {
+  /* @include box_center(500px); */
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 2;
+  z-index: 300px;
+  transform: translateX(-50%);
+  height: 200px;
+  border: 1px solid red; }

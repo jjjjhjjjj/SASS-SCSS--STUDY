@@ -1,0 +1,10 @@
+@charset 'utf-8';
+
+@for $i from 1 to 5 {
+  .list li.ico#{$i} {
+    color: red;
+  }
+  .list li:nth-child(#{$i}):before {
+    content: "제목#{$i}";
+  }
+}

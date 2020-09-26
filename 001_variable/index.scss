@@ -1,0 +1,31 @@
+@charset 'utf-8';
+
+$gray: #c9c9c9;
+$white: #ffffff;
+$blue: blue;
+$red: red;
+$fs30: 30px;
+
+.btn1 {
+  display: block;
+  width: 300px;
+  line-height: 50px;
+  font-size: $fs30;
+  color: $gray;
+  background-color: $white;
+  border: 1px solid $gray;
+
+  &:hover {
+    background: $gray;
+    color: $white;
+  }
+}
+
+.btn2 {
+  display: block;
+  padding: 10px;
+  font-size: $fs30;
+  border: 1px solid $red;
+  background: $blue;
+  color: $gray;
+}

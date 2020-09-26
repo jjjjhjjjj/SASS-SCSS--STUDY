@@ -1,0 +1,35 @@
+@charset "UTF-8";
+.test > div {
+  border: 3px solid blue;
+}
+.test > div:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.test > div > p {
+  float: left;
+  width: 100px;
+  height: 100px;
+  border: 1px solid red;
+}
+
+/* 매개변수 */
+.parameter > div {
+  border: 1px solid blue;
+}
+
+.parameter > p {
+  border: 1px solid pink;
+}
+
+.parameter > span {
+  border: 1px solid black;
+}
+
+/* 매개변수 여러개 */
+.parameters div {
+  width: 300px;
+  height: 400px;
+  border: 1px solid blue;
+}

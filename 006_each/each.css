@@ -1,0 +1,10 @@
+@charset "UTF-8";
+/* 앞에는 key ex) h1 , 뒤에는 value  ex) 30px */
+h1 {
+  font-size: 30px; }
+
+h2 {
+  font-size: 20px; }
+
+h3 {
+  font-size: 15px; }

@@ -1,0 +1,13 @@
+@charset 'utf-8';
+
+@mixin bx($position, $width, $color) {
+  border-#{$position}: $width solid $color;
+}
+
+div {
+  @include bx(right, 2px, red);
+}
+
+p {
+  @include bx(bottom, 5px, gray);
+}

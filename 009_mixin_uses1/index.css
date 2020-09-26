@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/* 클리어 */
+.a {
+  border: 1px solid red;
+  background-color: red; }
+  .a:after {
+    content: "";
+    display: block;
+    clear: both; }
+  .a > div {
+    float: left; }
+
+/* 말 줄임표 */
+.b {
+  overflow: hidden;
+  display: block;
+  width: 100px;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+/* 여러줄 말 줄임표 */
+.c {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  width: 100px;
+  height: 65px;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical; }

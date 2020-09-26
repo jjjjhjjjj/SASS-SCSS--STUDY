@@ -1,0 +1,56 @@
+@charset 'utf-8';
+@mixin test {
+  width: 100px;
+  height: 100px;
+  border: 1px solid red;
+}
+
+@mixin clear {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+.test {
+  > div {
+    border: 3px solid blue;
+    @include clear();
+    > p {
+      float: left;
+      @include test();
+    }
+  }
+}
+
+/* 매개변수 */
+
+@mixin border($color) {
+  border: 1px solid $color;
+}
+
+.parameter {
+  > div {
+    @include border(blue);
+  }
+  > p {
+    @include border(pink);
+  }
+  > span {
+    @include border(black);
+  }
+}
+
+/* 매개변수 여러개 */
+
+@mixin box($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+.parameters {
+  div {
+    @include box(300px, 400px);
+    border: 1px solid blue;
+  }
+}

@@ -1,0 +1,50 @@
+@charset 'utf-8';
+
+/* 클리어 */
+
+@mixin clear {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+.a {
+  border: 1px solid red;
+  background-color: red;
+  @include clear;
+  > div {
+    float: left;
+  }
+}
+
+/* 말 줄임표 */
+
+@mixin ellipsis($w) {
+  overflow: hidden;
+  display: block;
+  width: $w;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.b {
+  @include ellipsis(100px);
+}
+
+/* 여러줄 말 줄임표 */
+
+@mixin ellipsis2($line, $w, $h) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  width: $w;
+  height: $h;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+}
+
+.c {
+  @include ellipsis2(3, 100px, 65px);
+}

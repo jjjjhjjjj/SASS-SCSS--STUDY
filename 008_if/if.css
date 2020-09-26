@@ -1,0 +1,17 @@
+@charset "UTF-8";
+.btn {
+  padding: 0 20px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #000;
+  text-align: center;
+  border-right: 15px; }
+
+/* 응용 */
+div {
+  width: 300px;
+  height: 300px;
+  background: #000;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  /* @include position(50%, null, 2); */ }

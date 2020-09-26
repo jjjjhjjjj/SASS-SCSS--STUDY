@@ -1,0 +1,20 @@
+@charset 'utf-8';
+
+@each $var in book, zoom, phone {
+  .ico_#{$var} {
+    //background 적용 가능
+  }
+}
+
+$heading: (
+  h1: 30px,
+  h2: 20px,
+  h3: 15px,
+);
+
+/* 앞에는 key ex) h1 , 뒤에는 value  ex) 30px */
+@each $ele, $fs in $heading {
+  #{$ele} {
+    font-size: $fs;
+  }
+}

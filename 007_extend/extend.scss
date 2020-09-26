@@ -1,0 +1,67 @@
+@charset 'utf-8';
+
+/* 
+  %__, . 은 and연산자(,)로
+  @mixin은 따로
+*/
+
+%name {
+  font-size: 14px;
+  color: blue;
+}
+
+.fs20 {
+  font-size: 20px;
+}
+
+@mixin name($bold, $color) {
+  font-weight: $bold;
+  background: $color;
+}
+
+.a {
+  @extend %name;
+  @include name(bold, black);
+}
+
+.b {
+  @extend %name;
+  @extend .fs20;
+}
+
+.c {
+  @extend %name;
+}
+
+/* 응용 */
+
+%m0auto {
+  margin: 0 auto;
+  width: 1200px;
+  background: rgba(0, 0, 0, 0.5);
+  height: inherit;
+}
+
+.visual {
+  height: 300px;
+  background: pink;
+  div {
+    @extend %m0auto;
+  }
+}
+
+.main {
+  height: 500px;
+  background: purple;
+  div {
+    @extend %m0auto;
+  }
+}
+
+.footer {
+  height: 150px;
+  background: violet;
+  div {
+    @extend %m0auto;
+  }
+}

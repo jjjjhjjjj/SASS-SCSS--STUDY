@@ -1,0 +1,19 @@
+.btn1 {
+  display: block;
+  width: 300px;
+  line-height: 50px;
+  font-size: 30px;
+  color: #c9c9c9;
+  background-color: #ffffff;
+  border: 1px solid #c9c9c9; }
+  .btn1:hover {
+    background: #c9c9c9;
+    color: #ffffff; }
+
+.btn2 {
+  display: block;
+  padding: 10px;
+  font-size: 30px;
+  border: 1px solid red;
+  background: blue;
+  color: #c9c9c9; }
